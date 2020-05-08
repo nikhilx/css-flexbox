@@ -131,11 +131,23 @@ Sidebar
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-largest) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+            @media only screen and (max-width: $bp-largest) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+            flex: 1;
         }
     }
 
@@ -173,6 +185,11 @@ Sidebar
         align-items: center;
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width: $bp-largest) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -190,6 +207,10 @@ Sidebar
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        display: none;
+    }
 }
 
 /****************************************************
@@ -373,6 +394,10 @@ RECOMMEND
     display: flex;
     align-items: center;
 
+    &__friends {
+        display: flex;
+    }
+
     &__photo {
         box-sizing: content-box;
         height: 4rem;
@@ -381,15 +406,12 @@ RECOMMEND
         border: 3px solid white;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 
     &__count {
         margin-right: auto;
-    }
-
-    &__friends {
     }
 }
 
@@ -404,6 +426,12 @@ REVIEWS
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 2rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -464,6 +492,10 @@ CTA
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 2rem;
